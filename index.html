@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>|| currency-Converter ||</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="currencyCode.js"></script>
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+				<img
+					src="/assets/svg/currency-exchange-svgrepo-com.svg"
+					alt="currency exchange logo"
+				/>
+				<h1>Exchange rates</h1>
+			</div>
+			<div class="mode">
+				<img src="/assets/svg/darkmode.svg" alt="dark mode svg" />
+				<p>dark mode</p>
+			</div>
+		</header>
+		<main>
+			<div class="container">
+				<div class="left">
+					<h2>Real-Time Currency exchange</h2>
+					<h2>Exchange Rates</h2>
+					<h2>Accurate Currency Exchange Rates</h2>
+					<div class="span">
+						<span>Money Changer ||</span>
+						<span>Exchange Express ||</span>
+						<span>Currency Guru</span>
+					</div>
+					<img
+						src="./assets/img/currency-exchange-money-conversion-euro-600nw-1919947535.webp"
+						alt=""
+					/>
+				</div>
+				<div class="right">
+					<div class="converter">
+						<div class="loadera">
+							<div class="loaderb"></div>
+						</div>
+						<div class="animate">
+							<h2>start exchange from here</h2>
+						</div>
+						<p class="err-msg"></p>
+						<label for="amount">Amount :</label>
+						<input type="number" id="amount" placeholder="Enter Amount" />
+						<div class="select-container">
+							<div class="from-select">
+								<img
+									src="https://flagsapi.com/US/flat/64.png"
+									alt="flag image"
+								/>
+								<select name="from-curr" id="from-curr"></select>
+							</div>
+							<div class="convert-sign">
+								<img
+									src="/assets/svg/exchange-svgrepo-com.svg"
+									alt="exchange sign"
+								/>
+							</div>
+							<div class="to-select">
+								<img
+									src="https://flagsapi.com/IN/flat/64.png"
+									alt="flag image"
+								/>
+								<select name="to-curr" id="to-curr"></select>
+							</div>
+						</div>
+						<input type="text" disabled id="disabled" />
+						<div class="ppp">
+							<div class="pppa"></div>
+							<div class="pppb"></div>
+							<div class="pppc"></div>
+							<div class="pppd"></div>
+						</div>
+						<button class="submit-btn">get exchenge rates</button>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
