@@ -33,8 +33,7 @@ allSelect.forEach((selectElement) => {
 btn.addEventListener("click", () => {
 	document.querySelector(".loadera").style.display = "block";
 	document.querySelector(".ppp").style.display = "flex";
-	document.querySelector(".converter").style.boxShadow =
-		"inset 0px 0px 10px 0px #ff7010";
+	document.querySelector(".converter").classList.add("animation");
 	btn.disabled = true;
 	btn.style.color = "#828ef8";
 
@@ -48,9 +47,9 @@ btn.addEventListener("click", () => {
 		}, 3000);
 	}
 	let amountval = Number(amount.value);
-	if (amount == 0 || amountval < 1) {
-		amountval = 1;
+	if (amountval < 1) {
 		amount.value = 1;
+		amountval = 1;
 	}
 
 	const url = `https://currency-exchange.p.rapidapi.com/exchange?from=${fromSelectVal}&to=${toSelectVal}`;
@@ -73,12 +72,11 @@ btn.addEventListener("click", () => {
 			document.querySelector(".ppp").style.display = "none";
 			btn.disabled = false;
 			btn.style.color = "#fff";
-			document.querySelector(".converter").style.boxShadow =
-				"0px 0px 10px #fff";
+			document.querySelector(".converter").classList.remove("animation");
 
 			let disableVal = Math.round(data * amountval).toLocaleString();
 			if (disableVal == 0 || disableVal < 0 || disableVal === NaN) {
-				disableVal = "Not Reliable to Convert";
+				disableVal = "Not Reliable to Convert in ";
 			}
 			// disabledInput.value = disableVal + " " + toSelectVal;
 			disabledInput.value = `${amountval} ${fromSelectVal} = ${disableVal} ${toSelectVal}`;
@@ -90,7 +88,7 @@ btn.addEventListener("click", () => {
 			}, 3000);
 		})
 		.catch((err) => {
-			console.log(err);
+			console.log(err.message);
 			setTimeout(() => {
 				document.querySelector(".err-msg").innerText = "Something went Wrong !";
 				document.querySelector(".loadera").style.display = "none";
@@ -167,12 +165,10 @@ mode.addEventListener("click", () => {
 				"1px solid #ff7010";
 
 			document.querySelector("#disabled").style.backgroundColor = "#dbd9d9";
-			document.querySelector("#disabled").style.border =
-				"1px solid #ff7010";
+			document.querySelector("#disabled").style.border = "1px solid #ff7010";
 			document.querySelector(".right label").style.color = "#ff7010";
 			document.querySelector(".right input").style.background = "transparent";
-			document.querySelector(".right input").style.border =
-				"1px solid #ff7010";
+			document.querySelector(".right input").style.border = "1px solid #ff7010";
 			document.querySelector(".right input").style.color = "#000";
 			document.querySelector(".right h2").style.borderBottom =
 				"2px solid #ff7010";
