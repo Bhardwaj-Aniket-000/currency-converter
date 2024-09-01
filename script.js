@@ -110,7 +110,8 @@ mode.addEventListener("click", () => {
 		document.body.style.backgroundColor = "#031D2E";
 		document.querySelector(".converter").style.marginTop = "70px";
 		document.querySelector(".converter").style.boxShadow =
-			"0px 0px 20px 0px #052d48";
+			"0px 0px 5px 2px #ff7010";
+		document.querySelector("header").style.boxShadow = "0px 1px 2px #ff7010";
 		document.querySelector(".converter").style.backgroundColor = "#031a29";
 		document.querySelectorAll("h2").forEach((element) => {
 			element.style.color = "#fff";
@@ -137,7 +138,8 @@ mode.addEventListener("click", () => {
 		document.querySelector(".right input").style.backgroundColor = "#031D2E";
 		document.querySelector(".right input").style.border = "1px solid gray";
 		document.querySelector(".right input").style.color = "#fff";
-		document.querySelector(".right h2").style.borderBottom = "2px solid gray";
+		document.querySelector(".right h2").style.borderBottom =
+			"2px solid #ff7010";
 		const img = document.querySelector(".left img");
 		img.src = "/assets/img/convert_BTC_1200x675_EN.jpg";
 		img.style.height = "46%";
