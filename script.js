@@ -34,7 +34,7 @@ btn.addEventListener("click", () => {
 	document.querySelector(".loadera").style.display = "block";
 	document.querySelector(".ppp").style.display = "flex";
 	document.querySelector(".converter").style.boxShadow =
-		"inset 0px 0px 20px 2px rgb(172, 171, 173)";
+		"inset 0px 0px 10px 0px #ff7010";
 	btn.disabled = true;
 	btn.style.color = "#828ef8";
 
@@ -143,40 +143,40 @@ mode.addEventListener("click", () => {
 		const img = document.querySelector(".left img");
 		img.src = "/assets/img/convert_BTC_1200x675_EN.jpg";
 		img.style.height = "46%";
-		img.style.width = "100%";
+		img.style.width = "90%";
 		img.style.marginTop = "30px";
 	} else {
 		document.querySelector(".mode p").innerText = "Dark Mode";
 		document.querySelectorAll("h2").forEach((element) => {
-			element.style.color = "rgb(131, 12, 211)";
+			element.style.color = "#ff7010";
 			document.body.style.backgroundColor = "#fff";
 			document.querySelector(".converter").style.marginTop = "20px";
 			document.querySelector(".converter").style.boxShadow =
-				"0px 0px 10px 0px rgb(172, 171, 173)";
+				"0px 0px 10px 0px rgb(255, 255, 255)";
 			document.querySelector(".converter").style.backgroundColor = "#efeaea";
 			document.querySelectorAll("span").forEach((element) => {
-				element.style.color = "rgb(131, 12, 211)";
+				element.style.color = "#ff7010";
 			});
 			document.querySelectorAll(".right select").forEach((element) => {
 				element.style.backgroundColor = "#efeaea";
-				element.style.color = "rgb(131, 12, 211)";
+				element.style.color = "#212121";
 			});
 			document.querySelector(".select-container .from-select").style.border =
-				"2px solid rgb(131, 12, 211)";
+				"1px solid #ff7010";
 			document.querySelector(".select-container .to-select").style.border =
-				"2px solid rgb(131, 12, 211)";
+				"1px solid #ff7010";
 
 			document.querySelector("#disabled").style.backgroundColor = "#dbd9d9";
 			document.querySelector("#disabled").style.border =
-				"1px solid rgb(131, 12, 211)";
-			document.querySelector(".right label").style.color = "rgb(131, 12, 211)";
+				"1px solid #ff7010";
+			document.querySelector(".right label").style.color = "#ff7010";
 			document.querySelector(".right input").style.background = "transparent";
 			document.querySelector(".right input").style.border =
-				"1px solid rgb(131, 12, 211)";
+				"1px solid #ff7010";
 			document.querySelector(".right input").style.color = "#000";
 			document.querySelector(".right h2").style.borderBottom =
-				"2px solid rgb(131, 12, 211)";
-			document.querySelector(".logo h1").style.color = " rgb(131, 12, 211)";
+				"2px solid #ff7010";
+			document.querySelector(".logo h1").style.color = " #ff7010";
 			document.querySelector(".mode p").style.color = "#000";
 			document.querySelector(".mode img").src = "/assets/svg/darkmode.svg";
 			document.querySelector(".convert-sign img").src =
