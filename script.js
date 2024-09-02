@@ -42,8 +42,13 @@ btn.addEventListener("click", () => {
 	if (fromSelectVal == toSelectVal) {
 		document.querySelector(".err-msg").innerText =
 			"Not Converting... Both Currencies Are Same !";
+		document.querySelector(".loadera").style.display = "none";
+		document.querySelector(".ppp").style.display = "none";
+		btn.disabled = false;
+		btn.style.color = "#fff";
 		setTimeout(() => {
 			document.querySelector(".err-msg").innerText = "";
+			document.querySelector(".converter").classList.remove("animation");
 		}, 3000);
 	}
 	let amountval = Number(amount.value);
@@ -95,8 +100,7 @@ btn.addEventListener("click", () => {
 				document.querySelector(".ppp").style.display = "none";
 				btn.disabled = false;
 				btn.style.color = "#fff";
-				document.querySelector(".converter").style.boxShadow =
-					"0px 0px 10px #fff";
+				document.querySelector(".converter").classList.remove("animation");
 			}, 1000);
 			setTimeout(() => {
 				document.querySelector(".err-msg").innerText = "";
